@@ -34,4 +34,15 @@ myApp.controller('BookController', ['$http', function($http){
     });
   } // end addBook function
 
+  self.deleteBook = function(book){
+    console.log('delete was clicked');
+    console.log(book);
+    $http({
+      method: 'DELETE',
+      url: '/books/delete/' + book
+    }).then(function(response){
+      getBooks();
+    })
+  }
+
 }]); //ends BookController
