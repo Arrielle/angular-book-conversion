@@ -16,19 +16,21 @@ myApp.controller('BookController', ['$http', function($http){
     }).then(function(response){
       console.log(response.data);
       self.bookList = response.data;
-    })
+    });
   }//end function
 
 
 
-  self.addBook = function (){
+  self.addBook = function(){
+    console.log('clicked!!');
     $http({
-      method: '/POST',
+      method: 'POST',
       url: '/books',
       data: self.newBook
     }).then(function(response){
       getBooks();
       self.newBook = {};
+      console.log('clicked!!');
     });
   } // end addBook function
 

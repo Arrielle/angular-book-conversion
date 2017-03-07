@@ -36,7 +36,7 @@ router.get('/', function(req, res){
   });
 });
 
-router.post('/new', function(req, res){
+router.post('/', function(req, res){
   // This will be replaced with an INSERT statement to SQL
   var newBook = req.body;
 
