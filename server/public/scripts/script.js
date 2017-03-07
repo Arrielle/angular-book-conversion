@@ -39,7 +39,20 @@ myApp.controller('BookController', ['$http', function($http){
     console.log(book);
     $http({
       method: 'DELETE',
-      url: '/books/delete/' + book
+      url: '/books/delete/' + book.id
+    }).then(function(response){
+      getBooks();
+    })
+  }
+
+  self.saveBook = function(book){
+    console.log('save was clicked');
+    console.log(book);
+    console.log(book.id);
+    $http({
+      method: 'PUT',
+      url: '/books/save/' + book.id,
+      data: book
     }).then(function(response){
       getBooks();
     })
