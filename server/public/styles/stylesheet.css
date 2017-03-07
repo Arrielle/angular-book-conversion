@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Shrikhand', cursive;
+  src: url();
+}
+h1, h2, h3, h4, h5, h6, p, th{
+  font-family: 'Shrikhand', cursive;
+
+}
+
+#container {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: teal;
+  color: white;
+}
+
+#inputButton {
+  background-color: white;
+  border: 1px black solid;
+  color: black;
+  height: 30px;
+  border-radius: 8px;
+}
+
+#inputButton:hover {
+  background-color: black;
+  color: white;
+}
+
+input{
+  height: 25px;
+  border-radius: 4px;
+  border: 1px black solid;
+}
+
+input:focus{
+  background-color: teal;
+  color: white;
+}
+
+.deleteButton {
+height: 100%;
+background-color: tomato;
+border: 1px white solid;
+color: white;
+}
+
+.saveButton {
+  background-color: teal;
+  border: 1px white solid;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: white;
+  border: 1px teal solid;
+  color: teal;
+}
+
+.deleteButton:hover {
+  height: 100%;
+  background-color: white;
+  border: 1px tomato solid;
+  color: tomato;
+}

@@ -5,17 +5,21 @@
   <title>Books and Databases</title>
   <script src="vendors/angular.min.js" charset="utf-8"></script>
   <script src="scripts/script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/styles/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 </head>
 <body ng-app="BookApp" ng-controller="BookController as bc">
+  <div id = "container">
   <h1>Book Shelf</h1>
   <form>
     <input ng-model="bc.newBook.title" placeholder="Title">
     <input ng-model="bc.newBook.author" placeholder="Author">
     <input ng-model="bc.newBook.edition" placeholder="Edition">
     <input ng-model="bc.newBook.publisher" placeholder="Publisher">
-    <button ng-click="bc.addBook()">Click here to add the book!</button>
+    <button id="inputButton" ng-click="bc.addBook()">Click here to add the book!</button>
   </form>
-  <table>
+</div>
+  <table align = "center">
     <thead>
       <tr>
         <th>Title</th>
@@ -32,8 +36,8 @@
         <td><input ng-model="book.author"></td>
         <td><input ng-model="book.edition"></td>
         <td><input ng-model="book.publisher"></td>
-        <td><button type="button" ng-click="bc.deleteBook(book)">Delete</button></td>
-        <td><button ng-click="bc.saveBook(book)">Save</button></td>
+        <td><button class="deleteButton" type="button" ng-click="bc.deleteBook(book)">Delete</button></td>
+        <td><button class="saveButton "ng-click="bc.saveBook(book)">Save</button></td>
       </tr>
     </tbody>
   </table>
